@@ -10,39 +10,54 @@ function TablesConstructor({name, width, height, length, countertopMaterial, foo
     this.price = price;
 }
 
-class TablesClass{
-    constructor(name, width, height, length, countertopMaterial, footMaterial, countertopShape, price){
+class TablesClass
+{
+    constructor({name, width, height, length, countertopMaterial, footMaterial, countertopShape, price}) {
         this.name = name;
-        this.width = width;
-        this.height = height;
-        this.length = length;
+        this.width = this.checkDigit(width);
+        this.height = this.checkDigit(height);
+        this.length = this.checkDigit(length);
         this.countertopMaterial = countertopMaterial;
         this.footMaterial = footMaterial;
         this.countertopShape = countertopShape;
-        this.price = price;
+        this.price = this.checkDigit(price);
+    }
+
+    checkDigit(variable) {
+        if(!isNaN(variable) && variable > 0 && variable < Infinity) {
+            return variable;
+        } else {
+            return false;
+        }
     }
 }
-// const tb = new Tables("обеденный", "70", " 80", " 120", "массив сосны", "хромированный металл", "прямоугольная", "800");
-// console.log(tb);
 
-function Shoes(size, name, price, material) {
+function ShoesConstructor({size, name, price, material}) {
     this.size = size;
     this.name = name;
     this.price = price;
     this.material = material;
 }
 
-class Shoes1{
-    constructor(size, name, price, material){
-        this.size = size;
+class ShoesClass
+{
+    constructor({size, name, price, material}) {
+        this.size = this.checkDigit(size);
         this.name = name;
-        this.price = price;
+        this.price = this.checkDigit(price);
         this.material = material;
     }
-}
-// const sh = new Shoes()
 
-function CoWorker(name, lastName, dateOfBirth, education, gender, dateOfEmployment, nationality, specialty) {
+    checkDigit(variable) {
+        if(!isNaN(variable) && variable > 0 && variable < Infinity) {
+            return variable;
+        } else {
+            return false;
+        }
+    }
+}
+
+function WorkerConstructor({name, lastName, dateOfBirth, education, gender, dateOfEmployment, nationality, specialty}) {
     this.name = name;
     this.lastName = lastName;
     this.dateOfBirth= dateOfBirth;
@@ -53,11 +68,13 @@ function CoWorker(name, lastName, dateOfBirth, education, gender, dateOfEmployme
     this.specialty = specialty;
 }
 
+class WorkerClass
+{
 
+}
 
-
-
-let tableData = {
+let data = [
+    {
         name: "Jysk",
         width: 0.6,
         height: 0.8,
@@ -66,6 +83,34 @@ let tableData = {
         footMaterial: "Сосна",
         countertopShape: "Прямоугольный",
         price: 300
-};
-let table1 = new TablesConstructor(tableData);
-console.dir(`Объект стол в виде Констуктора:`, table1);
+    },
+    {
+        size: 42,
+        name: "Krosy",
+        price: 100,
+        material: "Koga"
+    },
+    {
+
+    }
+];
+
+//1.1. Object table - Constructor
+let table1 = new TablesConstructor(data[0]);
+console.log(`Объект стол в виде Констуктора:`);
+console.log(table1);
+
+//1.2. Object table - Class
+let table2 = new TablesClass(data[0]);
+console.log(`Объект стол в виде Класса:`);
+console.log(table2);
+
+//2.1. Object shoes - Constructor
+let shoes1 = new ShoesConstructor(data[1]);
+console.log(`Объект обувь в виде Констуктора:`);
+console.log(shoes1);
+
+//2.2. Object shoes - Class
+let shoes2 = new ShoesClass(data[1]);
+console.log(`Объект обувь в виде Класса:`);
+console.log(shoes2);
