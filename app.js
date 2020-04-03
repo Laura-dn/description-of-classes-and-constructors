@@ -1,4 +1,3 @@
-
 function TablesConstructor({name, width, height, length, countertopMaterial, footMaterial, countertopShape, price}) {
     this.name = name;
     this.width = width;
@@ -119,8 +118,6 @@ let data = [
         workerConstructor: new WorkerConstructor(data[2]),
         workerClass: new WorkerClass(data[2])
     };
-
-
 
 //1.1. Object table - Constructor
 console.log(objResult.tablesConstructor);
