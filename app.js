@@ -94,9 +94,9 @@ let data = [
     },
     {
         size: 42,
-        name: "Krosy",
+        name: "Krossy",
         price: 100,
-        material: "Koga"
+        material: "Kozha"
     },
     {
         name: "Laura",
