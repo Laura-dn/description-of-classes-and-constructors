@@ -68,4 +68,4 @@ let tableData = {
         price: 300
 };
 let table1 = new TablesConstructor(tableData);
-console.dir(table1);
+console.dir(`Объект стол в виде Констуктора:`, table1);
