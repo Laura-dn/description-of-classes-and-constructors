@@ -102,7 +102,7 @@ let data = [
         name: "Laura",
         lastName: "Avrakhova",
         dateOfBirth: "01.01.2001",
-        education: "Visshee",
+        education: "Vishee",
         gender: "girl",
         dateOfEmployment: "01.01.2020",
         nationality: "Ukraine",
