@@ -70,7 +70,16 @@ function WorkerConstructor({name, lastName, dateOfBirth, education, gender, date
 
 class WorkerClass
 {
-
+    constructor({name, lastName, dateOfBirth, education, gender, dateOfEmployment, nationality, specialty}) {
+        this.name = name;
+        this.lastName = lastName;
+        this.dateOfBirth= dateOfBirth;
+        this.education = education;
+        this.gender = gender;
+        this.dateOfEmployment = dateOfEmployment;
+        this.nationality = nationality;
+        this.specialty = specialty;
+    }
 }
 
 let data = [
@@ -91,26 +100,42 @@ let data = [
         material: "Koga"
     },
     {
-
+        name: "Laura",
+        lastName: "Avrakhova",
+        dateOfBirth: "01.01.2001",
+        education: "Visshee",
+        gender: "girl",
+        dateOfEmployment: "01.01.2020",
+        nationality: "Ukraine",
+        specialty: "Senior web-developer"
     }
-];
+],
+
+    objResult = {
+        tablesConstructor: new TablesConstructor(data[0]),
+        tablesClass: new TablesClass(data[0]),
+        shoesConstructor: new ShoesConstructor(data[1]),
+        shoesClass: new ShoesClass(data[1]),
+        workerConstructor: new WorkerConstructor(data[2]),
+        workerClass: new WorkerClass(data[2])
+    };
+
+
 
 //1.1. Object table - Constructor
-let table1 = new TablesConstructor(data[0]);
-console.log(`Объект стол в виде Констуктора:`);
-console.log(table1);
+console.log(objResult.tablesConstructor);
 
 //1.2. Object table - Class
-let table2 = new TablesClass(data[0]);
-console.log(`Объект стол в виде Класса:`);
-console.log(table2);
+console.log(objResult.tablesClass);
 
 //2.1. Object shoes - Constructor
-let shoes1 = new ShoesConstructor(data[1]);
-console.log(`Объект обувь в виде Констуктора:`);
-console.log(shoes1);
+console.log(objResult.shoesConstructor);
 
 //2.2. Object shoes - Class
-let shoes2 = new ShoesClass(data[1]);
-console.log(`Объект обувь в виде Класса:`);
-console.log(shoes2);
+console.log(objResult.shoesClass);
+
+//3.1. Object worker - Constructor
+console.log(objResult.workerConstructor);
+
+//3.2. Object worker - Class
+console.log(objResult.workerClass);
