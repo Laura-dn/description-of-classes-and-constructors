@@ -1,8 +1,5 @@
 
-function Tables(name, width, height, length, countertopMaterial, footMaterial, countertopShape, price) {
-
-    let ob
-
+function TablesConstructor({name, width, height, length, countertopMaterial, footMaterial, countertopShape, price}) {
     this.name = name;
     this.width = width;
     this.height = height;
@@ -13,9 +10,7 @@ function Tables(name, width, height, length, countertopMaterial, footMaterial, c
     this.price = price;
 }
 
-class Tables1{
-
-
+class TablesClass{
     constructor(name, width, height, length, countertopMaterial, footMaterial, countertopShape, price){
         this.name = name;
         this.width = width;
@@ -27,8 +22,8 @@ class Tables1{
         this.price = price;
     }
 }
-const tb = new Tables("обеденный", "70", " 80", " 120", "массив сосны", "хромированный металл", "прямоугольная", "800");
-console.log(tb);
+// const tb = new Tables("обеденный", "70", " 80", " 120", "массив сосны", "хромированный металл", "прямоугольная", "800");
+// console.log(tb);
 
 function Shoes(size, name, price, material) {
     this.size = size;
@@ -45,7 +40,7 @@ class Shoes1{
         this.material = material;
     }
 }
-const sh = new Shoes()
+// const sh = new Shoes()
 
 function CoWorker(name, lastName, dateOfBirth, education, gender, dateOfEmployment, nationality, specialty) {
     this.name = name;
@@ -57,3 +52,20 @@ function CoWorker(name, lastName, dateOfBirth, education, gender, dateOfEmployme
     this.nationality = nationality;
     this.specialty = specialty;
 }
+
+
+
+
+
+let tableData = {
+        name: "Jysk",
+        width: 0.6,
+        height: 0.8,
+        length: 1.5,
+        countertopMaterial: "ПВХ",
+        footMaterial: "Сосна",
+        countertopShape: "Прямоугольный",
+        price: 300
+};
+let table1 = new TablesConstructor(tableData);
+console.dir(table1);
