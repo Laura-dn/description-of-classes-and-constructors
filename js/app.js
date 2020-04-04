@@ -105,7 +105,7 @@ let data = [
         education: "Vishee",
         gender: "girl",
         dateOfEmployment: "01.01.2020",
-        nationality: "Ukraine",
+        nationality: "Ukrainian",
         specialty: "Senior web-developer"
     }
 ],
