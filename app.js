@@ -1,4 +1,3 @@
-
 function TablesConstructor({name, width, height, length, countertopMaterial, footMaterial, countertopShape, price}) {
     this.name = name;
     this.width = width;
@@ -95,15 +94,15 @@ let data = [
     },
     {
         size: 42,
-        name: "Krosy",
+        name: "Krossy",
         price: 100,
-        material: "Koga"
+        material: "Kozha"
     },
     {
         name: "Laura",
         lastName: "Avrakhova",
         dateOfBirth: "01.01.2001",
-        education: "Visshee",
+        education: "Vishee",
         gender: "girl",
         dateOfEmployment: "01.01.2020",
         nationality: "Ukraine",
