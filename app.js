@@ -120,8 +120,6 @@ let data = [
         workerClass: new WorkerClass(data[2])
     };
 
-
-
 //1.1. Object table - Constructor
 console.log(objResult.tablesConstructor);
 
